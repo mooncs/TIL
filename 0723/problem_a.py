@@ -15,6 +15,15 @@ def movie_info(movie):
     
     return result
 
+# def movie_info(movie):
+#     # 여기에 코드를 작성합니다.
+#     movie_keys = ['id', 'title', 'poster_path', 'vote_average', 'overview', 'genre_ids']    
+#     result = {}
+#     for key in movie_keys:
+#         result[key] = movie.get(key)
+    
+#     return result
+
 
 
 # 아래의 코드는 수정하지 않습니다.

@@ -17,10 +17,10 @@ def max_revenue(movies):
 # def max_revenue(movies):
 #     # 여기에 코드를 작성합니다.
 #     max_value = 0
-#     revenue = ''
+#     result = ''
 #     for movie in movies:
 #         movie_id = movie.get('id')
-#         m_json = open(f'data/movies/{movie_id}.json', encoding='UTF8')
+#         m_json = open(f'c:/Users/csmoo/OneDrive/바탕 화면/python/SSAFY/0723/data/movies/{movie_id}.json', encoding='UTF8')
 #         m_info = json.load(m_json)
 #         if m_info.get('revenue') > max_value:
 #             max_value = m_info['revenue']
