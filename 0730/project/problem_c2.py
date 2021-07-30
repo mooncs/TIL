@@ -1,7 +1,6 @@
 import requests
 from tmdb import TMDBHelper
 from pprint import pprint
-from operator import itemgetter
 
 
 def ranking():
@@ -13,12 +12,19 @@ def ranking():
     data = requests.get(url)
     popular_data = data.json()
     popular_lst = popular_data.get('results')
-    # 가져온 리스트 형태의 데이터를 sorted()와 itemgetter를 통해 평점순으로 정렬한다.
-    new_pop_lst = sorted(popular_lst, key=itemgetter('vote_average'), reverse=True)
-    # new_pop_lst = sorted(popular_lst, key=lambda x: x['vote_average'], reverse=True)
 
-    # 정렬된 리스트에서 처음부터 5번째까지의 영화 정보를 반환한다.
-    return new_pop_lst[:5]
+    vote_average = []
+    for i in range(len(popular_lst)):
+        vote_average.append(popular_lst[i].get('vote_average'))
+    vote_sorted = sorted(vote_average, reverse=True)[:5]
+    
+    high_avg_movie = []
+    for i in range(len(popular_lst)):
+        if popular_lst[i].get('vote_average') in vote_sorted:
+            high_avg_movie.append(popular_lst[i])
+
+    return high_avg_movie
+
 
 
 if __name__ == '__main__':
