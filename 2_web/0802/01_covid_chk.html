@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+    <header>
+    	<a href="https://coronaboard.kr/">
+        <img src="covid.jpg" alt="main img" width="300">
+      </a>
+    	<h1>학생 건강 설문></h1>
+    </header>
+    <section>
+    	<form action="#">
+        	<div>
+                <label for="name">이름을 기재해주세요.</label><br>
+                <input type="text" id="name" name="name" autofocus>
+                <!-- autofocus, 입력이 바로 가능하도록 커서를 입력창 선택상태로 -->
+            </div>
+            <hr>
+            
+            <div>
+                <label for="region">지역을 선택해주세요.</label><br>
+                <select name="region" id="region" required>
+                <!-- required, 필수적으로 선택 -->
+                    <option value="">선택</option>
+                    <option value="서울">서울</option>
+                    <option value="대전">대전</option>
+                    <option value="광주" disabled>광주</option>
+                    <option value="구미" disabled>구미</option>
+                    <option value="부산">부산</option>
+                    <!-- disabled, 비활성화 -->
+                </select>
+            </div>
+            <hr>
+            
+            <div>
+                <p>오늘의 체온을 선택해주세요.</p>
+                <input type="radio" id="normal" name="body-heat" value="normal" checked>
+                <!-- checked, 기본적으로 check해두겠다. -->
+                <!-- radio는 하나만 체크, checkbox는 여러개 선택 가능 -->
+                <label for="normal">37도 미만</label><br>
+                <input type="radio" id="warning" name="body-heat" value="warning">
+                <label for="warning">37도 이상</label>
+            </div>
+            <hr>
+            
+            <input type="submit" value="제출">
+            <!-- submit, 서버로 데이터를 제출 -->
+        </form>
+    </section>
+    <footer>
+        Google 설문지를 통해 비밀번호를 제출하지 마시오.
+    </footer>
+</body>
+
+</html>	
