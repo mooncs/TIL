@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selector</title>
+  <!-- 자손 결합자 -->
+  <style>
+    div p {
+      color: crimson;
+    }
+  </style>
+  <!-- 자식 결합자 -->
+  <!-- <style>
+    div > p {
+      color: crimson;
+    }
+  </style> -->
+</head>
+<body>
+  <div>
+    <span>이건 빨강이 아닙니다!</span>
+    <p>이건 빨강입니다.</p>
+    <span>
+    	<p>이건 빨강입니다.</p>    
+    </span>
+</div>
+</body>
+</html>

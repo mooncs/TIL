@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clone Google</title>
+
+  <style type="text/css">
+    a:link { color: skyblue; text-decoration: none; font-size: 15px;}
+    a:visited { color: blue; text-decoration: none;}
+    a:hover { color: red; text-decoration: underline;}
+   </style>
+  
+</head>
+<body>
+  <header>
+    <a href="https://google.com">
+      <img src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F277027375874594F09" alt="Google" width="100">
+    </a>  
+    <h2>Google 계정만들기</h2>
+  </header>
+  
+  <section>
+    <form action="#">
+      <div>
+        <input type="text" id="lastname" name="name" placeholder="성" size=22 autofocus>
+        <input type="text" id="firstname" name="name" placeholder="이름" size=22><br>
+        <input type="email" id="email" name="email" placeholder="이메일 주소" size=50><br>
+        <label for="email" style="font-size: 12px; color:grey;"> 이 이메일이 본인 소유인지 확인해야 합니다.</label><br>
+        <!-- <p style="font-size: 12px; color:grey;"> 이 이메일이 본인 소유인지 확인해야 합니다.</p> -->
+        <a href="https://accounts.google.com/signup">
+          새로운 Gmail주소 만들기
+        </a>
+      </div>
+      <br>
+      <div>
+        <input type="password" id="pinput" name="password" placeholder="비밀번호" size=22>
+        <input type="password" id="pcheck" name="password" placeholder="확인" size=22><br>
+        <label for="password" style="font-size: 12px; color:grey;"> 문자, 숫자, 기호를 조합하여 8자 이상을 사용하세요.</label><br>
+        <!-- <p style="font-size: 12px; color:grey;"> 문자, 숫자, 기호를 조합하여 8자 이상을 사용하세요</p> -->
+  
+        <input type="checkbox" name="password" id="visible" value="visible">
+        <label for="visible">비밀번호 표시</label><br>
+      </div>
+    </form>
+  </section>
+  <br>
+  <br>
+  <footer>
+    <a href="https://accounts.google.com/signin">
+      대신 로그인하기
+    </a>
+    <input type="submit" value="다음">
+  </footer>
+</body>
+</html>
