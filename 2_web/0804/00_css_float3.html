@@ -28,18 +28,12 @@
     .left {
       float: left;
     }
-
-    .clearfix::after {
-      content: "";
-      display: block;
-      clear: both;
-    }
   </style>
 </head>
 <body>
-  <header class="clearfix">
-    <div class="box1 left">float left</div>
-  </header>
+  <!-- BOX2가 작아진 것이 아니라 BOX1 밑으로 겹쳐진 것이다. -->
+  <!-- 원래라면 BOX2는 자신의 자리를 유지해야한다. -->
+  <div class="box1 left">BOX1</div>
   <div class="box2">BOX2</div>
 </body>
 </html>

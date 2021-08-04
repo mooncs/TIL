@@ -31,6 +31,8 @@ img {
   /* justify-content: flex-end; */
   justify-content: center;
   /* justify-content: space-between; */
+  /* 내부 간격이 외부 간격의 2배 */
   /* justify-content: space-around; */
+  /* 내부 외부 간격의 균등 정렬 */
   /* justify-content: space-evenly; */
 }

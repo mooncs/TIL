@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=\, initial-scale=1.0">
-  <title>CSS Float</title>
+  <title>CSS Floatclear</title>
   <style>
     .box1 {
       width: 150px;
@@ -24,11 +24,25 @@
       text-align: center;
       line-height: 150px;
     }
+
+    .left {
+      float: left;
+    }
+
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <div class="box1">BOX1</div>
+  <!-- BOX2가 작아진 것이 아니라 BOX1 밑으로 겹쳐진 것이다. 레이아웃이 망가진다. -->
+  <!-- 원래라면 BOX2는 자신의 자리를 유지해야한다. -->
+  <!-- float clear를 통해 문제를 해결 -->
+  <!-- BOX1과 BOX2 사이에 무언가 있음을 확인할 수 있다. 가상의 투명한 막 생성 -->
+  <header class="clearfix">
+    <div class="box1 left">float left</div>
   </header>
   <div class="box2">BOX2</div>
 </body>

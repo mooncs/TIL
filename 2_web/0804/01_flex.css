@@ -40,5 +40,8 @@ body {
 
 .flex-container{
   /* 정렬하려고하는 부모 요소에 선언 */
+  /* 전체 요소만큼 너비를 차지 */
   display: flex;
+  /* 안에 있는 요소만큼만 너비를 차지 */
+  /* display: inline-flex; */
 }

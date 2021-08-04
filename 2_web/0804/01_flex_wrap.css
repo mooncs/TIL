@@ -44,6 +44,8 @@ body {
 
   /* 요소들이 강제로 한줄에 배치되게 할 것인지 여부 설정 */
   /* flex-wrap: nowrap; */
+  /* 튀어나가는 부분을 다음줄로 넣어준다. */
   flex-wrap: wrap;
+  /* 튀어나가면(넘치면 그 윗줄로 넣어준다. */
   /* flex-wrap: wrap-reverse; */
 }

@@ -2,12 +2,24 @@
 
 > **CSS Flexible Box Layout**
 
-- 요소간 공간 배분과 정렬 기능을 위한 1차원(단방향) 레이아웃
+- 오랫동안 CSS Layout을 작성할 수 있는 도구는 float 및 positioning 뿐이었다.
+
+  - 그로 인해 문제가 있는 것은 아니었지만, 어떤 면에서는 제한적이고 한계가 존재
+
+- Flexbox라 불리는 Flexible Box module은 Flexbox 인터페이스 내의 아이템 간 **`"공간 배분"`**과 강력한 **`"정렬"`**기능을 제공하기 위한 1차원 레이아웃 모델로 설계되었다.
+
+   
+
+- 요소간 **`공간 배분`**과 **`정렬`** 기능을 위한 **`1차원(단방향)`** 레이아웃
+
 - 크게 딱 2가지만 기억할 것!  **`요소!`**와 **`축!`** 
-- 요소
+
+
+
+- **요소**
   - Flex Container (부모 요소)
   - Flex Item (자식 요소)
-- 축
+- **축**
   - main axis (메인축)
   - cross axis (교차축)
 
@@ -17,18 +29,20 @@
 
 > **Flexbox의 구성요소**
 
-- Flex Container (부모 요소)
-  - flexbox 레이아웃을 형성하는 가장 기본적인 모델
+- `Flex Container (부모 요소)`
+  - Flexbox 레이아웃을 형성하는 가장 기본적인 모델
   - Flex Item들이 놓여있는 영역
-  - display 속성을 flex 혹은 inline-flex로 지정
-- Flex Item (자식 요소)
+  - 생성하려면 display 속성을 flex 혹은 inline-flex로 지정
+  - **부모가 Item을 컨트롤하는 것임을 생각해야한다!!!**
+- `Flex Item (자식 요소)`
   - 컨테이너의 컨텐츠
 
 
 
 > **flexbox의 시작**
 
-- 부모 요소에 display: flex 혹은 inline-flex를 작성하는 것부터 시작
+- Flex Container를 선언하는 것으로 시작
+- 부모 요소에 display: flex 혹은 inline-flex를 작성
 
 ```css
 .flex-container {
@@ -42,10 +56,11 @@
 
 - 배치 방향 설정
   - flex-direction
-- 메인축 방향 정렬
-  - justify-content
-- 교차축 방향 정렬
-  - align-items, align-self, align-content
+- `메인축` 방향 정렬
+  - `justify`-content, ~~justify-items, justify-self~~
+  - justify-items, justify-selfs는 의미가 없다. margin auto가 있기 때문에
+- `교차축` 방향 정렬
+  - `align`-items, align-self, align-content
 - 기타
   - flex-wrap, flex-flow, flex-grow, order, flex-shrink, flex-basis
 
@@ -53,7 +68,9 @@
 
 > **flex-direction**
 
-- main-axis 방향만 바뀐다.
+- **main-axis 방향만** 바뀐다.
+  - main axis는 왼쪽부터 오른쪽으로 가는 것이 기본 값
+  - cross axis는 위쪽부터 아래쪽으로 가는 것이 기본 값
 - flexbox는 단방향 레이아웃이기 때문이다.
 
 <img src="./image/flexdirection.png">
@@ -69,12 +86,12 @@
 > **content & items & self**
 
 - content
-  - 여러 줄
+  - 여러 줄을 동시에
 
 - items
-  - 한 줄
+  - 한 줄만
 - self
-  - flex item 개별 요소
+  - flex item 개별 요소를 선택
 - 예시
   - justify-content : 메인축 기중 여러 줄 정렬
   - align-items : 교차축 기준 한 줄 정렬

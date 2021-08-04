@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Arial;
+}
+
+p {
+  font-family: Arial;
+}
+
+.container {
+  width: 1000px;
+  margin: 30px auto;
+}
+
+img {
+  display: block;
+}
+
+.flex-container {
+  display: flex;
+}
+
+/* 교차축 개별 정렬 */
+.item1 {
+  align-self: flex-start;
+  /* order, 정렬된 순서를 바꿀 수 있다.(기본값 0) */
+  order: 0;
+  /* 
+    flex-grow, 
+    주축에서 남는 공간을 각 항목들에게 분배(기본값 0)
+    각 아이템의 상대적 비율을 정하는 것이 아니다.
+    음수 값은 불가능
+    */
+  flex-grow: 1;
+}
+
+.item2 {
+  align-self: center;
+  /* 작을수록 앞으로 정렬 */
+  order: -1;
+  flex-grow: 2;
+}
+
+.item3 {
+  align-self: flex-end;
+  /* 클수록 뒤로 정렬 */
+  order: 1;
+  /* 남는 공간에 대한 배분 */
+  /* 현재는 총 6등분을 해서 item1은 1/6, item2는 2/6, item3은 3/6 */
+  flex-grow: 3;
+}

@@ -27,9 +27,14 @@ img {
   /* row 방향이 기본 값 */
   flex-direction: row;
   /* 교차축 정렬 */
+  /* 기본값 */
   /* align-items: stretch; */
+  /* 각각의 넓이 만큼 위쪽 위치 */
   /* align-items: flex-start; */
+  /* 각각의 넓이 만큼 아래쪽 위치 */
   /* align-items: flex-end; */
+  /* 각각의 넓이 만큼 중간에 위치 */
   align-items: center;
+  /* 텍스트의 baseline에 맞춰지는것 */
   /* align-items: baseline; */
 }
