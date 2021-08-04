@@ -1,0 +1,13 @@
+.flex-container{
+  /* 정렬하려고하는 부모 요소에 선언 */
+  display: flex;
+
+  /* nowrap이 기본값 */
+  flex-wrap: nowrap;
+  /* 메인축 방향 설정, 쌓이는 방향 설정(메인축의 방향만 바뀐다.) */
+  /* flex-direction: row; */
+  /* flex-direction: row-reverse; */
+  flex-direction: column;
+  /* flex-direction: column-reverse; */
+  
+}

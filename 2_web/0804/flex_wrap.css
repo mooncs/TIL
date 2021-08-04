@@ -1,0 +1,9 @@
+.flex-container{
+  /* 정렬하려고하는 부모 요소에 선언 */
+  display: flex;
+
+  /* 요소들이 강제로 한줄에 배치되게 할 것인지 여부 설정 */
+  /* flex-wrap: nowrap; */
+  flex-wrap: wrap;
+  /* flex-wrap: wrap-reverse; */
+}

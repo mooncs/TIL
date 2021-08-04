@@ -1,0 +1,4 @@
+.flex-container{
+  /* 정렬하려고하는 부모 요소에 선언 */
+  display: flex;
+}

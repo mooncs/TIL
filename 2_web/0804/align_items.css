@@ -1,0 +1,10 @@
+.flex-container{
+  /* row 방향이 기본 값 */
+  flex-direction: row;
+  /* 교차축 정렬 */
+  /* align-items: stretch; */
+  /* align-items: flex-start; */
+  /* align-items: flex-end; */
+  align-items: center;
+  /* align-items: baseline; */
+}
