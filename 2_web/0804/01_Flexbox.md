@@ -117,7 +117,7 @@
   - inline-flex : flex 영역을 블록으로 쓰지 않고 인라인 블록으로 사용
 - **`flex-direction`**
   - item이 쌓이는 방향 결정
-  - main-axis 가 변경된다.
+  - **main-axis** 가 변경된다.
   - row(기본값) : 주축의 방향이 왼쪽에서 오른쪽
   - row-reverse : 주축의 방향이 오른쪽에서 왼쪽
   - column : 주축의 방향이 위에서 아래
