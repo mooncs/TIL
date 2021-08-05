@@ -148,6 +148,8 @@ bootstrap.css에 구현되어 있는 클래스
 <div class="box ms-auto">ms-auto, 오른쪽 정렬</div>
 ```
 
+
+
 ```html
 <h2>Color</h2>
 <div class="bg-primary">이건 파랑</div>
@@ -156,6 +158,8 @@ bootstrap.css에 구현되어 있는 클래스
 <div class="text-success">이건 초록색 글씨</div>
 <div class="text-danger">이건 빨간색 글씨</div>
 ```
+
+
 
 ```html
 <h2>Text</h2>
@@ -169,6 +173,8 @@ bootstrap.css에 구현되어 있는 클래스
 <p class="fw-italic">Italic text.</p>
 ```
 
+
+
 ```html
 <h2>Display</h2>
 <div class="d-inline p-2 bg-primary text-white">d-inline</div>
@@ -178,6 +184,8 @@ bootstrap.css에 구현되어 있는 클래스
 <div class="box bg-warning d-sm-none d-md-block">can you see me?</div>
 <div class="box bg-success d-md-none d-xl-block">can you see me?</div>
 ```
+
+
 
 ```html
 <h2>Position</h2>
