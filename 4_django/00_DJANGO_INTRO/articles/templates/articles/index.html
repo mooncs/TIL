@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>드디어 첫 페이지로구먼</h1>
+  {% comment %} 너무 하드하다. {% endcomment %}
+  {% comment %} <a href="/articles/greeting/">인사하는 곳으로</a>
+  <a href="/articles/throw/">메세지 던지러 꼬우</a>
+  <a href="/articles/dinner/">오늘 저녁은 무엇?</a> {% endcomment %}
+
+  {% comment %} 의존성 줄이기 {% endcomment %}
+  <a href="{% url 'articles:greeting' %}">인사하는 곳으로</a>
+  <a href="{% url 'articles:throw' %}">메세지 던지러 꼬우</a>
+  <a href="{% url 'articles:dinner' %}">오늘 저녁은 무엇?</a>
+
+  <a href="{% url 'pages:index' %}">두번째 앱 인덱스로</a>
+{% endblock content %}

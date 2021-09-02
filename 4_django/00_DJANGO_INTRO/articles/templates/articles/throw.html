@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>던져던져 다던져</h1>
+  {% comment %} <form action="/catch/" method="GET"> {% endcomment %}
+  <form action="{% url 'articles:catch' %}" method="GET">
+  {% comment %} 
+  action="/catch/"
+  action="catch/"
+  차이를 잘 파악할 것!!!
+  {% endcomment %}
+    <lable for="message">Throw</label>
+    <input type="text" name="message" id="message">
+    <input type="submit">
+  </form>
+{% endblock content %}

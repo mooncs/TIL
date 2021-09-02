@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <p>{{ today|date:" Y년 m월 d일 (D) A f " }}</p>
+  {% for post in posts %}
+      <p>{{ forloop.counter0 }}번 글 : {{ post }}</p>
+  {% endfor %}
+
+  <form action="{% url 'articles:catch' %}" method="">
+    <lable for="title">Title : </label>
+    <input type="text" name="title" id="title">
+    <lable for="content">Content : </label>
+    <input type="text" name="content" id="content">
+    <lable for="my-site">My-Site : </label>
+    <input type="text" name="my-site" id="my-site">
+    
+    <input type="submit">
+  </form>
+{% endblock content %}

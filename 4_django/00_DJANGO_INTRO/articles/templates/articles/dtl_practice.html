@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>1. for </h1>
+  {% for food in foods %}
+    <p>{{ food }}</p>
+  {% endfor %}
+
+  <hr>
+
+  {% comment %} 함수 사용 {% endcomment %}
+  {% for food in foods %}
+    <p>{{ forloop.counter }} {{ food }}</p>
+  {% endfor %}
+  
+  <hr>
+  
+  {% for user in user_list %}
+    <p> {{ user }} </p>
+  {% empty %}
+    <p>지금 가입한 유저가 없다.</p>
+  {% endfor %}
+
+  <hr>
+
+  <h1> 2. IF</h1>
+  {% if 'apple' in fruits %}
+    <p>사과 들어 있음</p>
+  {% endif %}
+
+  <hr>
+
+  {% for fruit in fruits %}
+    {% if forloop.first %}
+      <p>애플+{{ fruit }}</p>
+    {% else %}
+      <p>{{ fruit }}</p>
+    {% endif %}
+  {% endfor %}
+  <hr>
+
+  <h1>3. length 활용 </h1>
+  {% for fruit in fruits %}
+    {% if fruit|length > 5 %}
+      <p>이름 너무길다.</p>
+    {% else %}
+      <p>{{ fruit }} {{ fruit|length }} </p>
+    {% endif %}
+  {% endfor %}
+  <hr>
+
+  <h1>4. lorem </h1>
+  {% lorem %}
+
+  <hr>
+
+  {% lorem 3 w %}
+  <hr>
+
+  {% lorem 4 w random %}
+  <hr>
+  {% lorem 2 p %}
+  <hr>
+
+  <h1>5. 글자 관련필터</h1>
+  <p>{{ 'ABC'|lower }}</p>
+  <p>{{ 'my FIRST post'|title }}</p>
+  <p>{{ 'my name is tom'|capfirst }}</p>
+  <p>{{ foods|random }}</p>
+
+
+  {% comment %} django-mathfilters {% endcomment %}
+  <h1>6. 연산</h1>
+  <p>{{ 4|add:6 }}</p>
+
+  <h1>7. 다양한 날짜 표현</h1>
+  {% now "DATE_FORMAT" %} <br>
+  {% now "DATETIME_FORMAT" %} <br>
+  {% now "SHORT_DATE_FORMAT" %} <br>
+  {% now "SHORT_DATETIME_FORMAT" %} <br>
+  <hr>  
+  {% now "Y년 m월 d일 (D) H:i" %} <br>
+  <hr>
+
+  {% now "Y" as current_year %}
+  Copyright {{ current_year }}
+{% endblock content %}

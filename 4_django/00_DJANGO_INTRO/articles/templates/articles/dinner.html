@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>오늘의 저녁 메뉴는?</h1>
+  <p>후보는 {{ foods|join:", " }}으로 총 {{ foods|length }}개 中에서 </p>
+  <p>{{ pick }}을/를 먹겠다!!!!!!!</p>
+
+  <hr>
+  <h2>메뉴판</h2>
+  <ul>
+    {% for food in foods %}
+      <li>{{ food }}</li>
+    {% endfor %}
+  </ul>
+
+  {# 이것은 한 줄 주석 #}
+
+  {% comment %} 
+  이것은
+  여러줄
+  주석!!
+  {% endcomment %}
+{% endblock content %}
