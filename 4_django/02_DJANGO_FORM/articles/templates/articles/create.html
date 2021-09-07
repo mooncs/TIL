@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>NEW</h1>
+  <form action="{% url 'articles:create' %}" method="POST">
+    {% csrf_token %}
+    {# form #}
+    {# form.as_p → 각 필드를 <p> 태그로 감싸서 렌더링  #}
+    {{ form.as_p }}
+    <input type="submit">
+  </form>
+  <hr>
+  <a href="{% url 'articles:index' %}">[back]</a>
+{% endblock  %}
