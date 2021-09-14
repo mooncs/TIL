@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <img src="{% static 'articles/1.jpg' %}" alt="sample">
+  <h2>DETAIL</h2>
+  <h3>{{ article.pk }} 번째 글</h3>
+  {% comment %}
+  이미지가 없는 경우 출력할 이미지가 없기 때문에 오류가 나는데,
+  이를 해결하기 위해서 if문 사용 → 이미지가 있을 때만 출력
+  {% endcomment %}
+  {% if article.image %}
+    <img src="{{ article.image.url }}" alt="{{ article.image }}">
+  {% comment %} 
+  default 이미지를 삽입하여 이미지가 없을 때는 default 이미지를 출력
+  {% else %}
+    <img src="{% static 'images/default.jpg' %}" alt="default image"> 
+  {% endcomment %}
+  {% endif %}
+
+  {# 이미지 resize하기 #}
+  {% comment %} 
+  {% if article.image %}
+    <img src="{{ article.image_thumbnail.url }}" alt="{{ article.image_thumbnail }}">
+  {% else %}
+    <img src="{% static 'images/default.jpg' %}" alt="default image">
+  {% endif %}   
+  {% endcomment %}
+  
+  <hr>
+  <p>제목 : {{ article.title }}</p>
+  <p>내용 : {{ article.content }}</p>
+  <p>작성시각 : {{ article.created_at }}</p>
+  <p>수정시각 : {{ article.updated_at }}</p>
+  <hr>
+  <a href="{% url 'articles:update' article.pk %}">[UPDATE]</a>
+  <form action="{% url 'articles:delete' article.pk %}" method="POST">
+    {% csrf_token %}
+    <button>DELETE</button>
+  </form>
+  <a href="{% url 'articles:index' %}">[back]</a>
+{% endblock content %}
