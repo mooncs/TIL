@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login as auth_login
 from django.contrib.auth import logout as auth_logout
 from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, UserChangeForm, PasswordChangeForm
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_http_methods, require_POST
@@ -9,6 +10,15 @@ from django.views.decorators.http import require_http_methods, require_POST
 from .forms import CustomUserChangeForm
 
 # Create your views here.
+def index(request):
+    User = get_user_model()
+    users = User.objects.all()
+    context = {
+        'users':users,
+    }
+    return render(request, 'accounts/index.html', context)
+
+
 @require_http_methods(['POST', 'GET'])
 def login(request):
     # 로그인이 되어있으면, 로그인을 할 필요가 없다.
